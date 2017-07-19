@@ -3,6 +3,7 @@ import java.util.*;
 
 class QuickSort {
 
+	// Partition algorithm: Swap elements from the left and right side of the pivot
 	int partition(ArrayList<Integer> arr, int left, int right) {
 		int pivot = arr.get((left+right)/2);
 		while (left <= right) {
