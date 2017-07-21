@@ -8,7 +8,7 @@ class QuickSort {
 		int pivot = arr.get((left+right)/2);
 		while (left <= right) {
 			while (arr.get(left)<pivot) left++;
-			while (arr.get(right)>pivot) right--;
+			while (arr.get(right)>pivot) right--;			
 			if (left<=right) {
 				Collections.swap(arr, left, right);
 				left++;
