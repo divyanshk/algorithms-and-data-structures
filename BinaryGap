@@ -1,0 +1,17 @@
+# https://leetcode.com/contest/weekly-contest-93/problems/binary-gap/
+class Solution:
+    def binaryGap(self, N):
+        """
+        :type N: int
+        :rtype: int
+        """
+        _bin = list(str(bin(N))[2:])[::-1]
+        res, _last, _first = 0, 0, False
+        for _i, _d in enumerate(_bin):
+            if _d == '1':
+                if not _first:
+                    _first = True
+                else:
+                    res = max(res, _i - _last)
+                _last = _i
+        return res
